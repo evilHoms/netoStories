@@ -20,13 +20,13 @@
 
 .stories__logo {
   min-height: 10px;
-  padding: 33px 25px;
+  padding: 34px 25px;
   
   background: #fff;
 }
 
 .stories__logo__netology-logo {
-  max-height: 20px;
+  max-height: 18px;
 }
 
 .stories__slider {
@@ -45,15 +45,17 @@
 
 .stories__slider__photos-wrapper {
   overflow: hidden;
-  width: 400px;
-  height: 70px;
+  width: 435px;
+  height: 72px;
   padding: 3px;
+  margin-left: 20px;
 }
 
 .stories__slider__photo {
   display: inline-block;
-  width: 60px;
-  height: 60px;
+  width: 61px;
+  height: 61px;
+  margin: 3px;
   
   background: #aaa;
   
@@ -134,8 +136,10 @@
 }
 
 .stories__action__arrow {
-  height: 80px;
+  height: 75px;
   width: 30px;
+  margin-top: -5px;
+  margin-bottom: 15px;
   
   background: transparent url(../img/arrow.png);
   background-size: cover;
@@ -158,6 +162,26 @@
   padding-bottom: 30px;
 }
 
+.stories__action__text-sending {
+  padding-bottom: 0px;
+  margin-top: -45px;
+}
+
+.stories__action__text-error {
+  padding-bottom: 0px;
+  margin-top: 45px;
+}
+
+.stories__action__text-nohistory {
+  padding-bottom: 15px;
+  margin-top: -25px;
+}
+
+.stories__action__text-preparing {
+  padding-bottom: 0px;
+  margin-top: 50px;
+}
+
 .faded {
   color: #777;
 }
@@ -168,11 +192,13 @@
 }
 
 .stories__action__web-cam {
+  height: 60px;
+  width: 60px;
+  margin-top: 15px;
+  
   background: url(../img/record.png);
   background-size: cover;
   background-position: 0 0;
-  height: 60px;
-  width: 60px;
 }
 
 .stories__action__web-cam:hover {
@@ -184,6 +210,8 @@
 .stories__action__video {
   width: 390px;
   height: 290px;
+  margin-top: 35px;
+  margin-left: 5px;
   margin-bottom: 10px;
   
   background: #f2f2f2;
@@ -195,6 +223,7 @@
   overflow: hidden;
   border-top: 1px solid #cbcbcb;
   border-bottom: 1px solid #cbcbcb;
+  margin-left: 5px;
   
   background: #f2f2f2;
 }
@@ -221,15 +250,39 @@
 }
 
 .waiting {
+  margin-top: 10px;
+  
   background-position: 60px 0;
 }
 
 .error {
+  margin-bottom: 10px;
+  
   background-position: 120px 0;
 }
 
 .success {
   margin-top: 0;
+  margin-bottom: 50px;
   
   background-position: 0 0;
+}
+
+.fading {
+  animation: fading 2s forwards;
+}
+
+@keyframes fading {
+  0 {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0; 
+    width: 60px;
+    position: relative;
+  }
+  100% {
+    width: 0;
+    position: absolute;
+  }
 }
